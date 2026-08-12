@@ -58,7 +58,7 @@ agentManagerService:
 
   image:
     repository: ghcr.io/wso2/amp-api
-    tag: "0.0.0-dev"
+    tag: "v1.0.0-beta"
     pullPolicy: IfNotPresent
 
   # Reachable externally via the control-plane gateway (see ocIngress);
@@ -384,7 +384,7 @@ console:
 
   image:
     repository: ghcr.io/wso2/amp-console
-    tag: "0.0.0-dev"
+    tag: "v1.0.0-beta"
     pullPolicy: Always
 
   # Reachable externally via the control-plane gateway (see ocIngress);
@@ -449,14 +449,14 @@ console:
     # Agent Manager release version — pins the deployment-script git tag (amp/vX.Y.Z).
     # Placeholder is substituted with the real release version by the release
     # pipeline (.github/scripts/update-helm-charts.sh); dev builds fall back to main.
-    ampVersion: "0.0.0-dev"
+    ampVersion: "v1.0.0-beta"
     # Documentation version the console's in-product doc links point at, used as
     # the path segment after /docs/. "latest" tracks the newest released docs.
     # The release pipeline (.github/scripts/update-helm-charts.sh) pins this to
     # the matching versioned docs (vX.Y.x, or the exact version for a
     # pre-release) for final and pre-release builds. Release candidates and
     # nightlies keep "latest", because no docs version is cut for them.
-    docsVersion: "latest"
+    docsVersion: "v1.0.0-beta"
     # Trace-export URL shown to external agent developers. kgateway-routed
     # vhost — independent of the gateway runtime's namespace; no port-forward.
     instrumentationUrl: "http://default-default.gateway.localhost:19080/otel"
@@ -511,7 +511,7 @@ dbMigration:
 
   image:
     repository: ghcr.io/wso2/amp-api
-    tag: "0.0.0-dev"
+    tag: "v1.0.0-beta"
     pullPolicy: IfNotPresent
 
   resources:
