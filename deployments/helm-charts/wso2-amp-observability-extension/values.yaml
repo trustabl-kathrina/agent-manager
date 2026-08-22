@@ -6,7 +6,7 @@ amObserver:
   replicaCount: 1
   image:
     repository: ghcr.io/wso2/amp-observer
-    tag: "0.0.0-dev"
+    tag: "v1.0.0-rc1"
     pullPolicy: IfNotPresent
   port: 9098
   resourceLimits:
